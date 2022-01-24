@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Tools Enchantments</title>
+    <style>
+        .b {
+            border: 1px solid gray;
+            border-radius: 0.25rem;
+        }
+
+        .abcde {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container my-4">
+        <div class="mb-3">
+            <span>Command:</span>
+            <textarea id="textarea" class="form-control" rows="3" readonly>
+            </textarea>
+            <button id="hehe" class="btn btn-sm btn-outline-primary mt-2" onclick="copyToClipboard()">Copy!</button>
+        </div>
+
+        <hr>
+        <div class="inp">
+            <div class="row b my-3">
+                <div class="col">
+                    <span>Tool:</span>
+                    <select id="sel" class="form-select form-select-md mb-3">
+                        <option value="netherite_axe" selected>Netherite Axe</option>
+                        <option value="netherite_sword">Netherite Sword</option>
+                        <option value="netherite_pickaxe">Netherite Pickaxe</option>
+                        <option value="netherite_shovel">Netherite Shovel</option>
+                        <option value="netherite_hoe">Netherite Hoe</option>
+                        <option value="netherite_helmet">Netherite Helmet</option>
+                        <option value="netherite_chestplate">Netherite Chestplate</option>
+                        <option value="netherite_leggings">Netherite Leggings</option>
+                        <option value="netherite_boots">Netherite Boots</option>
+                        <option value="bow">Bow</option>
+                        <option value="trident">Trident</option>
+
+                    </select>
+                </div>
+            </div>
+            <div class="row b my-3">
+                <div class="">
+                    <div class="abcde">
+                        <span>Enchantments:</span>
+                        <span>Levels:</span>
+                    </div>
+                    <div class="encha">
+                        
+                        <div class="form-check abcde">
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="mending" id="e1">
+                                <label class="form-check-label" for="e1">
+                                    Mending
+                                </label>
+                            </div>
+                            <div>
+                                <input type="number" value="1" min="1" max="255" class="form-control">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-check abcde">
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="unbreaking" id="e2">
+                                <label class="form-check-label" for="e2">
+                                    Unbreaking
+                                </label>
+                            </div>
+                            <div>
+                                <input type="number" value="1" min="1" max="255" class="form-control">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-check abcde">
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="efficiency" id="e3">
+                                <label class="form-check-label" for="e3">
+                                    Efficiency
+                                </label>
+                            </div>
+                            <div>
+                                <input type="number" value="1" min="1" max="255" class="form-control">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-check abcde">
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="sharpness" id="e4">
+                                <label class="form-check-label" for="e4">
+                                    Sharpness
+                                </label>
+                            </div>
+                            <div>
+                                <input type="number" value="1" min="1" max="255" class="form-control">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-check abcde">
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="smite" id="e5">
+                                <label class="form-check-label" for="e5">
+                                    Smite
+                                </label>
+                            </div>
+                            <div>
+                                <input type="number" value="1" min="1" max="255" class="form-control">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-check abcde">
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="sweeping" id="e6">
+                                <label class="form-check-label" for="e6">
+                                    Sweeping Edge
+                                </label>
+                            </div>
+                            <div>
+                                <input type="number" value="1" min="1" max="255" class="form-control">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-check abcde">
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="fire_aspect" id="e7">
+                                <label class="form-check-label" for="e7">
+                                    Fire Aspect
+                                </label>
+                            </div>
+                            <div>
+                                <input type="number" value="1" min="1" max="255" class="form-control">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-check abcde">
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="knockback" id="e8">
+                                <label class="form-check-label" for="e8">
+                                    Knockback
+                                </label>
+                            </div>
+                            <div>
+                                <input type="number" value="1" min="1" max="255" class="form-control">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-check abcde">
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="looting" id="e9">
+                                <label class="form-check-label" for="e9">
+                                    Looting
+                                </label>
+                            </div>
+                            <div>
+                                <input type="number" value="1" min="1" max="255" class="form-control">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-check abcde">
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="fortune" id="e10">
+                                <label class="form-check-label" for="e10">
+                                    Fortune
+                                </label>
+                            </div>
+                            <div>
+                                <input type="number" value="1" min="1" max="255" class="form-control">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-check abcde">
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="silk_touch" id="e11">
+                                <label class="form-check-label" for="e11">
+                                    Silk Touch
+                                </label>
+                            </div>
+                            <div>
+                                <input type="number" value="1" min="1" max="255" class="form-control">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-check abcde">
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="channeling" id="e12">
+                                <label class="form-check-label" for="e12">
+                                    Channeling
+                                </label>
+                            </div>
+                            <div>
+                                <input type="number" value="1" min="1" max="255" class="form-control">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-check abcde">
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="depth_strider" id="e13">
+                                <label class="form-check-label" for="e13">
+                                    Depth Strider
+                                </label>
+                            </div>
+                            <div>
+                                <input type="number" value="1" min="1" max="255" class="form-control">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-check abcde">
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="feather_falling" id="e14">
+                                <label class="form-check-label" for="e14">
+                                    Feather Falling
+                                </label>
+                            </div>
+                            <div>
+                                <input type="number" value="1" min="1" max="255" class="form-control">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-check abcde">
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="protection" id="e15">
+                                <label class="form-check-label" for="e15">
+                                    Protection
+                                </label>
+                            </div>
+                            <div>
+                                <input type="number" value="1" min="1" max="255" class="form-control">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-check abcde">
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="flame" id="e16">
+                                <label class="form-check-label" for="e16">
+                                    Flame
+                                </label>
+                            </div>
+                            <div>
+                                <input type="number" value="1" min="1" max="255" class="form-control">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-check abcde">
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="frost_walker" id="e17">
+                                <label class="form-check-label" for="e17">
+                                    Frost Walker
+                                </label>
+                            </div>
+                            <div>
+                                <input type="number" value="1" min="1" max="255" class="form-control">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-check abcde">
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="infinity" id="e18">
+                                <label class="form-check-label" for="e18">
+                                    Infinity
+                                </label>
+                            </div>
+                            <div>
+                                <input type="number" value="1" min="1" max="255" class="form-control">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-check abcde">
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="loyalty" id="e19">
+                                <label class="form-check-label" for="e19">
+                                    Loyalty
+                                </label>
+                            </div>
+                            <div>
+                                <input type="number" value="1" min="1" max="255" class="form-control">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-check abcde">
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="power" id="e20">
+                                <label class="form-check-label" for="e20">
+                                    Power
+                                </label>
+                            </div>
+                            <div>
+                                <input type="number" value="1" min="1" max="255" class="form-control">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-check abcde">
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="punch" id="e21">
+                                <label class="form-check-label" for="e21">
+                                    Punch
+                                </label>
+                            </div>
+                            <div>
+                                <input type="number" value="1" min="1" max="255" class="form-control">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-check abcde">
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="riptide" id="e22">
+                                <label class="form-check-label" for="e22">
+                                    Riptide
+                                </label>
+                            </div>
+                            <div>
+                                <input type="number" value="1" min="1" max="255" class="form-control">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-check abcde">
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="respiration" id="e23">
+                                <label class="form-check-label" for="e23">
+                                    Respiration
+                                </label>
+                            </div>
+                            <div>
+                                <input type="number" value="1" min="1" max="255" class="form-control">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-check abcde">
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="soul_speed" id="e24">
+                                <label class="form-check-label" for="e24">
+                                    Soul Speed
+                                </label>
+                            </div>
+                            <div>
+                                <input type="number" value="1" min="1" max="255" class="form-control">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-check abcde">
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="thorns" id="e25">
+                                <label class="form-check-label" for="e25">
+                                    Thorns
+                                </label>
+                            </div>
+                            <div>
+                                <input type="number" value="1" min="1" max="255" class="form-control">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-check abcde">
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="fire_protection" id="e26">
+                                <label class="form-check-label" for="e26">
+                                    Fire Protection
+                                </label>
+                            </div>
+                            <div>
+                                <input type="number" value="1" min="1" max="255" class="form-control">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-check abcde">
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="blast_protection" id="e27">
+                                <label class="form-check-label" for="e27">
+                                    Blast Protection
+                                </label>
+                            </div>
+                            <div>
+                                <input type="number" value="1" min="1" max="255" class="form-control">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <button class="btn btn-outline-primary" id="abtn">Generate Command</button>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
